@@ -4,10 +4,10 @@ set -euox pipefail
 # In case tmux is not installed yet, then why you trying to config
 if ! type "tmux" > /dev/null; then
     while true; do
-        read -p "Do you wish to install tmux?
+        read -p "Do you wish to install tmux? [Y/n]
 " yn
         case $yn in
-            Yes ) sudo apt-get install tmux; break;;
+            Y ) sudo apt-get install tmux; break;;
             * ) echo "Continuing without installing tmux"; break;;
         esac
     done
